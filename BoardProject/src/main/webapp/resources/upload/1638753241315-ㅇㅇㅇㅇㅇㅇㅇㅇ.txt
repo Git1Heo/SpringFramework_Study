@@ -1,0 +1,8 @@
+buffer
+
+char[] b = B.toCharArray();
+문자열을 char 배열 형태로 반환해주는 메소드
+
+StringBuilder
+
+모듈러

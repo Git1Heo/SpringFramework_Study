@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <!--  매개변수 있을때 파라미터 타입 생성 -->
+ 
+ <mapper namespace="Trainee">
+ 	<insert id="insertTrainee" parameterType="tdto"> 
+ 		insert into trainee(t_name,age,phoneNumber,gender, birth,address)
+ 			values(#{t_name},#{age},#{phoneNumber},#{gender},#{birth},#{address})
+ 	</insert>
+ 	
+ 	<select id="findAll" resultType="tdto">
+ 		select * from Trainee
+ 	</select>
+	<select id="findById" parameterType="long" resultType="tdto">
+		select * from trainee where tnumber=#{tnumber}
+	</select> 			
+ </mapper>
